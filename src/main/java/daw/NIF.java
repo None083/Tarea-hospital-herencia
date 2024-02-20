@@ -60,4 +60,8 @@ public class NIF {
 //        
 //    }
     
+    public void renovar(LocalDate fechaSolicitud){
+        
+    }
+    
 }
