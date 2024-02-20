@@ -18,7 +18,7 @@ public class NIF {
 
     public NIF(String numero, LocalDate fechaCaducidad) {
         this.numero = numero;
-        this.letra = letra;
+        this.letra = calcularLetra();
         this.fechaCaducidad = fechaCaducidad;
     }
 
@@ -56,12 +56,17 @@ public class NIF {
         return sb.toString();
     }
     
-//    private char calcularLetra(){
-//        
-//    }
-    
-    public void renovar(LocalDate fechaSolicitud){
+    private char calcularLetra(){
+        int numeroDNI = Integer.parseInt(this.numero);
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         
+        int resto = numeroDNI % 23;
+
+        return letras.charAt(resto);
+    }
+    
+    public void renovar(LocalDate fecha){
+        this.fechaCaducidad = fecha.plusYears(10);
     }
     
 }
