@@ -57,12 +57,12 @@ public class NIF {
     }
     
     private char calcularLetra(){
-        int numeroDNI = Integer.parseInt(this.numero);
+        long numeroDNI = Long.parseLong(this.numero);
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         
-        int resto = numeroDNI % 23;
+        long resto = numeroDNI % 23;
 
-        return letras.charAt(resto);
+        return letras.charAt((int)resto);
     }
     
     public void renovar(LocalDate fecha){

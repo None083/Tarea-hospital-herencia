@@ -12,9 +12,9 @@ public class Medico extends Empleado implements Nadador {
 
     private String especialidad;
 
-    public Medico(String espacialidad, String numeroSeguridadSocial, double salario, String nombre, String apellidos, NIF nif) {
+    public Medico(String especialidad, String numeroSeguridadSocial, double salario, String nombre, String apellidos, NIF nif) {
         super(numeroSeguridadSocial, salario, nombre, apellidos, nif);
-        this.especialidad = espacialidad;
+        this.especialidad = especialidad;
     }
 
     public Medico(String numeroSeguridadSocial, double salario, String nombre, String apellidos, NIF nif) {
@@ -49,7 +49,7 @@ public class Medico extends Empleado implements Nadador {
     }
 
     public void tratar(Paciente p, String medicina) {
-        System.out.println("El médico " + super.getNombre()
+        System.out.println("El médico " + super.getNombre() + " " + super.getApellidos()
                 + " está tratando al paciente " + p.getNombre()
                 + " con la medicina " + medicina);
     }

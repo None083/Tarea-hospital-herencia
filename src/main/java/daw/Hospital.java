@@ -25,9 +25,7 @@ public class Hospital {
         this.numeroCamas = numeroCamas;
         this.listaEmpleados = new ArrayList<>();
         this.listaPacientes = new ArrayList<>();
-    }
-
-    
+    }   
 
     public Hospital() {
     }
@@ -55,6 +53,15 @@ public class Hospital {
     public void setNumeroCamas(int numeroCamas) {
         this.numeroCamas = numeroCamas;
     }
+
+    public List<Empleado> getListaEmpleados() {
+        return listaEmpleados;
+    }
+
+    public List<Paciente> getListaPacientes() {
+        return listaPacientes;
+    }
+    
 
     @Override
     public String toString() {
