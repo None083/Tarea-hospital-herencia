@@ -52,6 +52,7 @@ public class Medico extends Empleado implements Nadador {
         System.out.println("El médico " + super.getNombre() + " " + super.getApellidos()
                 + " está tratando al paciente " + p.getNombre()
                 + " con la medicina " + medicina);
+        p.tomarMedicina(medicina);
     }
 
     @Override

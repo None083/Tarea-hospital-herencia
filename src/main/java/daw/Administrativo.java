@@ -40,13 +40,13 @@ public class Administrativo extends Empleado {
     }
     
     public void registrarDocumento(String documento){
-        System.out.println(super.getNombre() + " " + super.getApellidos() 
+        System.out.println(this.getNombre() + " " + this.getApellidos() 
                 + " ha registrando el documuento " + documento 
                 + " con hashcode " + documento.hashCode());
     }
     
     public double calcularIRPF(){
-        return super.getSalario() * this.grupo.getIrpf();
+        return this.getSalario() * this.grupo.getIrpf();
     }
     
 }

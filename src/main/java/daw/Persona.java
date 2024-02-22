@@ -58,7 +58,7 @@ public abstract class Persona{
         return sb.toString();
     }
     
-    public void renovarNIF(LocalDate fecha){
+    public final void renovarNIF(LocalDate fecha){
         this.nif.renovar(fecha);
     }
     
